@@ -302,12 +302,6 @@ section .Breaking-noimg{
     color: blue;
 }
 
-.popular-content{
-    padding-left: 0;
-    width: auto;
-    margin: 0 auto;
-}
-
 .break-content{
     padding-right: 20px;
     padding-left: 10px;
@@ -316,11 +310,12 @@ section .Breaking-noimg{
 
 /* Chỉnh sửa content để căn chỉnh đúng */
 .popular-content {
-    width: 200px; /* Chiều rộng bằng với hình ảnh */
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
+    padding: 0;
 }
 .popular-content .content {
     width: 100%;
@@ -1150,10 +1145,6 @@ section .Breaking-noimg{
     /* Breaking News Container */
     .Breaking-news-container{
         flex-direction: row;
-    }
-    
-    .popular-content{
-        padding-left: 50%;
     }
     
     /* News Categories */
