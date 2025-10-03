@@ -9,11 +9,15 @@ body {
     color: #333;
     background-color: #ffffff;
     line-height: 1.5;
+    overflow-x: hidden;
 }
 
 main{
     margin: 0 auto;
     padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 header{
@@ -24,6 +28,8 @@ header{
     background-repeat: no-repeat;
     height: 50px;
     background-position: top center;
+    width: 100%;
+    box-sizing: border-box;
 }
 .p-center-title{
     margin-top: 50px;
@@ -64,40 +70,47 @@ header{
     height: 50px;
     display: flex;
     align-items: center;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
 
 .main-nav .my-account{
-    font-size: 24px;
+    font-size: 16px;
     margin: 0px;
     color: white;
-    padding: 0 20px 0 20px;
+    padding: 0 10px;
     margin-left: auto;
+    white-space: nowrap;
 }
 
 .main-nav .logo{
-    font-size: 24px;
-    margin: 20px 20px 20px 20px;
+    font-size: 16px;
+    margin: 0;
     color: white;
-    padding: 20px;
+    padding: 10px;
+    white-space: nowrap;
 }
 
 .main-nav ul{
     list-style: none;
-    display: flex;
+    display: none;
     align-items: center;
-    padding: 0 30px;
+    padding: 0;
     color: white;
 }
 
 .main-nav li{
-    padding: 0 20px;
+    padding: 0 10px;
     display: flex;
     align-items: center;
+    font-size: 12px;
 }
 
 .main-nav-list{
     list-style: none;
-    display: flex;
+    display: none; /* Ẩn menu trên mobile */
     align-items: center;
 }
 
@@ -105,7 +118,7 @@ header{
     width: 20px;
     height: 20px;
     filter: invert(1);
-
+    margin-left: auto;
 }
 
 .header-container{
@@ -125,6 +138,8 @@ header{
 .Breaking-news-container{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
 }
 
 .Breaking-news-container section {
@@ -219,7 +234,9 @@ section .Breaking-noimg{
 }
 
 .popular-content{
-    padding-left: 50%;
+    padding-left: 0;
+    width: auto;
+    margin: 0 auto;
 }
 
 .break-content{
@@ -237,7 +254,7 @@ section .Breaking-noimg{
     margin-bottom: 20px;
 }
 .popular-content .content {
-    width: 200px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -299,8 +316,10 @@ section .Breaking-noimg{
 /* News Categories */
 .news-categories {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .category-header {
@@ -593,8 +612,8 @@ section .Breaking-noimg{
 }
 
 .women-item {
-    flex: 1;
-    max-width: 19%;
+    flex: 1 0 100%;
+    max-width: 100%;
 }
 
 .women-image img {
@@ -1029,4 +1048,159 @@ section .Breaking-noimg{
     color: #fff;
     text-decoration: none;
     font-size: 24px;
+}
+
+/* Media Queries cho Responsive Design */
+
+/* Tablet và Desktop - từ 768px trở lên */
+@media (min-width: 768px) {
+    /* Main Navigation */
+    .main-nav .logo{
+        font-size: 24px;
+        padding: 20px;
+    }
+    
+    .main-nav-list{
+        display: flex !important; /* Hiện menu trên màn hình lớn */
+    }
+    
+    .main-nav .my-account{
+        font-size: 20px;
+    }
+    
+    .main-nav li{
+        font-size: 14px;
+        padding: 0 15px;
+    }
+    
+    /* Breaking News Container */
+    .Breaking-news-container{
+        flex-direction: row;
+    }
+    
+    .popular-content{
+        padding-left: 50%;
+    }
+    
+    /* News Categories */
+    .news-categories {
+        flex-direction: row;
+    }
+    
+    .news-columns {
+        flex-direction: row;
+    }
+    
+    /* Tech & Destinations */
+    .tech-destinations-section {
+        flex-direction: row;
+    }
+    
+    /* Women Section */
+    .featured-row {
+        flex-direction: row;
+    }
+    
+    .women-item {
+        flex: 1;
+        max-width: 19%;
+    }
+    
+    /* Latest Subscribe */
+    .latest-subscribe-section .container {
+        flex-direction: row;
+    }
+}
+
+/* Mobile - dưới 768px */
+@media (max-width: 767px) {
+    /* Main Navigation - giữ menu ẩn */
+    .main-nav .my-account {
+        font-size: 14px;
+        padding: 0 5px;
+    }
+    
+    /* Breaking News Container */
+    .Breaking-news-container {
+        flex-direction: column;
+    }
+    
+    .Breaking-news-container section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .popular-content {
+        padding-left: 0;
+        width: 100%;
+    }
+    
+    /* News Categories */
+    .news-categories {
+        flex-direction: column;
+    }
+    
+    .news-grid {
+        flex-direction: column;
+    }
+    
+    .news-columns {
+        flex-direction: column;
+    }
+    
+    /* Tech & Destinations */
+    .tech-destinations-section {
+        flex-direction: column;
+    }
+    
+    .tech-row {
+        flex-direction: column;
+    }
+    
+    /* Subscription Banner */
+    .subscription-banner {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    /* Women Section */
+    .featured-row {
+        flex-direction: column;
+    }
+    
+    .women-grid {
+        flex-wrap: wrap;
+    }
+    
+    .women-item {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+    
+    /* Latest Subscribe */
+    .latest-subscribe-section .container {
+        flex-direction: column;
+    }
+    
+    /* Footer */
+    .footer-columns {
+        flex-direction: column;
+    }
+    
+    .footer-top {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-nav ul {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
 }
