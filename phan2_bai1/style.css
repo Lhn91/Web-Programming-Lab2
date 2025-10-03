@@ -1,0 +1,11 @@
+.completed {
+    text-decoration: line-through; /* Gạch ngang chữ */
+    opacity: 0.7; /* Làm mờ đi một chút */
+    background-color: #d4edda; /* Đổi màu nền */
+}
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer; /* Biến con trỏ thành hình bàn tay khi di chuột */
+}
