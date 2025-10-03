@@ -31,6 +31,75 @@ header{
     width: 100%;
     box-sizing: border-box;
 }
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #4a4a4a;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    background-color: #5a5a5a;
+}
+
+.sidebar a.active {
+    color: #3366cc;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 40px;
+    padding: 0;
+    color: white;
+}
+
+.sidebar-title {
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.openbtn {
+    font-size: 24px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    border: none;
+    display: none;
+    align-items: center;
+}
+
+.openbtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Desktop nav hiển thị mặc định trên desktop */
+.main-nav-list {
+    display: flex;
+}
 .p-center-title{
     margin-top: 50px;
     margin-bottom: 10px;
@@ -95,7 +164,7 @@ header{
 
 .main-nav ul{
     list-style: none;
-    display: none;
+    display: flex;
     align-items: center;
     padding: 0;
     color: white;
@@ -110,7 +179,7 @@ header{
 
 .main-nav-list{
     list-style: none;
-    display: none; /* Ẩn menu trên mobile */
+    display: flex;
     align-items: center;
 }
 
@@ -1054,6 +1123,11 @@ section .Breaking-noimg{
 
 /* Tablet và Desktop - từ 768px trở lên */
 @media (min-width: 768px) {
+    /* Ẩn nút hamburger trên desktop */
+    .openbtn {
+        display: none !important;
+    }
+    
     /* Main Navigation */
     .main-nav .logo{
         font-size: 24px;
@@ -1114,10 +1188,26 @@ section .Breaking-noimg{
 
 /* Mobile - dưới 768px */
 @media (max-width: 767px) {
+    /* Hiển thị nút hamburger trên mobile */
+    .openbtn {
+        display: flex !important;
+    }
+    
+    /* Ẩn menu desktop trên mobile */
+    .main-nav-list {
+        display: none !important;
+    }
+    
     /* Main Navigation - giữ menu ẩn */
     .main-nav .my-account {
         font-size: 14px;
         padding: 0 5px;
+    }
+    
+    /* Logo nhỏ hơn trên mobile */
+    .main-nav .logo {
+        font-size: 16px;
+        padding: 10px 5px;
     }
     
     /* Breaking News Container */
