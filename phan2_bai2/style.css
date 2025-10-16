@@ -1,0 +1,12 @@
+body {
+background-color: #f8f9fa;
+}
+
+.calculator-container {
+max-width: 500px;
+margin: 5rem auto;
+padding: 2rem;
+background-color: white;
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

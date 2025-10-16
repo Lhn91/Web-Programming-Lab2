@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký Thành Viên</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h1 class="card-title text-center mb-4">Đăng Ký Thành Viên</h1>
+                        
+                        <form id="registrationForm" novalidate>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="e.g. John">
+                                    <div class="error-message" id="firstNameError"></div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="e.g. Doe">
+                                    <div class="error-message" id="lastNameError"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="your-email@example.com">
+                                <div class="error-message" id="emailError"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Tạo mật khẩu của bạn">
+                                <div class="error-message" id="passwordError"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Birthday</label>
+                                <div class="row">
+                                    <div class="col">
+                                        <select id="day" class="form-select"></select>
+                                        <div class="error-message" id="dayError"></div>
+                                    </div>
+                                    <div class="col">
+                                        <select id="month" class="form-select"></select>
+                                        <div class="error-message" id="monthError"></div>
+                                    </div>
+                                    <div class="col">
+                                        <select id="year" class="form-select"></select>
+                                        <div class="error-message" id="yearError"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Gender</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                                        <label class="form-check-label" for="male">Nam</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                                        <label class="form-check-label" for="female">Nữ</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                                        <label class="form-check-label" for="other">Không xác định</label>
+                                    </div>
+                                </div>
+                                <div class="error-message" id="genderError"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="country" class="form-label">Country</label>
+                                <select id="country" class="form-select">
+                                    <option value="" selected>-- Chọn quốc gia --</option>
+                                    <option value="Vietnam">Vietnam</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="United States">United States</option>
+                                    <option value="India">India</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="error-message" id="countryError"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="about" class="form-label">About</label>
+                                <textarea class="form-control" id="about" rows="4" placeholder="Giới thiệu một chút về bạn..."></textarea>
+                                <div class="error-message" id="aboutError"></div>
+                            </div>
+                            
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="terms">
+                                <label class="form-check-label" for="terms">
+                                    Tôi đồng ý với các điều khoản và điều kiện.
+                                </label>
+                                <div class="error-message" id="termsError"></div>
+                            </div>
+                            
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="reset" class="btn btn-secondary">Reset</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

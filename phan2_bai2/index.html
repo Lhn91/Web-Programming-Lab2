@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy Tính Cơ Bản</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-container">
+            <h1 class="text-center mb-4">Máy Tính Cơ Bản</h1>
+            
+            <form id="calculatorForm">
+                <div class="mb-3">
+                    <label for="soA" class="form-label">Số thứ nhất (a):</label>
+                    <input type="number" class="form-control" id="soA" placeholder="Nhập số a" required>
+                </div>
+                <div class="mb-3">
+                    <label for="soB" class="form-label">Số thứ hai (b):</label>
+                    <input type="number" class="form-control" id="soB" placeholder="Nhập số b" required>
+                </div>
+                
+                <div class="d-flex justify-content-center flex-wrap gap-2">
+                    <button type="button" class="btn btn-primary" data-op="add">+</button>
+                    <button type="button" class="btn btn-info" data-op="subtract">-</button>
+                    <button type="button" class="btn btn-success" data-op="multiply">*</button>
+                    <button type="button" class="btn btn-warning" data-op="divide">/</button>
+                    <button type="button" class="btn btn-secondary" data-op="power">a^b</button>
+                </div>
+            </form>
+            
+            <div id="ketQua" class="alert alert-light mt-4" role="alert">
+                Kết quả sẽ được hiển thị ở đây.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

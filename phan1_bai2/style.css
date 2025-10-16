@@ -1,0 +1,246 @@
+/* ==================================
+   Custom CSS for Product Page
+   ================================== */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+}
+
+header h1 {
+    font-weight: bold;
+    color: #000;
+}
+
+header nav a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header input[type="search"] {
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+}
+
+/* Sidebar Styles */
+aside {
+    background-color: #fff;
+}
+
+.sidebar-section {
+    margin-bottom: 0;
+}
+
+.sidebar-header {
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+
+.sidebar-list {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-list li {
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-list li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.sidebar-list li a:hover {
+    background-color: #f5f5f5;
+    color: #0066cc;
+}
+
+/* Product Image Styles */
+.main-product-image {
+    width: 100%;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.main-product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.thumbnail-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+
+.thumbnail-image:hover {
+    border-color: #007bff;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Product Info Styles */
+.product-summary h6 {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.product-summary p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.btn-outline-dark {
+    border-radius: 25px;
+    padding: 10px 40px;
+    font-weight: 500;
+}
+
+.btn-outline-dark:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Product Description Styles */
+.product-description h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-description p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Advertisement Space */
+.ad-space {
+    min-height: 600px;
+    width: 160px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f8f9fa;
+}
+
+footer a {
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+
+/* Tablet and below */
+@media (max-width: 991px) {
+    .ad-space {
+        min-height: 200px;
+        width: 100%;
+    }
+    
+    header .col-md-4 {
+        margin-bottom: 10px;
+    }
+    
+    header nav {
+        text-align: center;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 767px) {
+    .sidebar-section {
+        margin-bottom: 20px;
+    }
+    
+    .main-product-image {
+        margin-bottom: 20px;
+    }
+    
+    header h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    header input[type="search"] {
+        width: 100%;
+    }
+    
+    .product-summary,
+    .product-description {
+        margin-top: 20px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 576px) {
+    .thumbnail-image {
+        margin-bottom: 10px;
+    }
+    
+    .btn-outline-dark {
+        width: 100%;
+    }
+    
+    .sidebar-header {
+        font-size: 14px;
+    }
+    
+    .sidebar-list li a {
+        font-size: 13px;
+    }
+}
+

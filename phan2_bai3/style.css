@@ -1,0 +1,16 @@
+body {
+    background-color: #f0f2f5;
+}
+
+.error-message {
+    color: #dc3545; /* Màu đỏ của Bootstrap cho lỗi */
+    font-size: 0.875em; /* Kích thước chữ nhỏ hơn một chút */
+    margin-top: 0.25rem;
+    display: none; /* Ẩn thông báo lỗi mặc định */
+}
+
+/* Thêm border màu đỏ cho input khi có lỗi */
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #dc3545;
+}

@@ -40,9 +40,18 @@ header{
     top: 0;
     left: 0;
     background-color: #4a4a4a;
+    overflow: hidden;
+    overflow-y: hidden;
     overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     transition: 0.3s;
     padding-top: 60px;
+    touch-action: none;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
 }
 
 .sidebar a {
@@ -53,6 +62,7 @@ header{
     display: block;
     transition: 0.3s;
     font-weight: bold;
+    pointer-events: auto;
 }
 
 .sidebar a:hover {
@@ -139,10 +149,18 @@ header{
     height: 50px;
     display: flex;
     align-items: center;
+    overflow: hidden;
+    overflow-y: hidden;
     overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     width: 100%;
     box-sizing: border-box;
     padding: 0 10px;
+}
+
+.main-nav::-webkit-scrollbar {
+    display: none;
 }
 
 .main-nav .my-account{
@@ -168,6 +186,7 @@ header{
     align-items: center;
     padding: 0;
     color: white;
+    overflow: hidden;
 }
 
 .main-nav li{
@@ -181,6 +200,7 @@ header{
     list-style: none;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .search-icon{
